@@ -1,0 +1,10 @@
+local key = game.Players.LocalPlayer:GetAttribute("Key") -- or use an input UI
+
+-- Check key against a remote source
+local keyList = game:HttpGet("https://loot-link.com/s?SJIqoQK7")
+
+if string.find(keyList, key) then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/.../BARF"))()
+else
+    warn("Invalid key!")
+end
